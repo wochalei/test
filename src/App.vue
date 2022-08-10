@@ -5,8 +5,8 @@
   <div class="wrap">
     <div class="item" v-for="(item,index) in data" :key="index">
       <div class="title">
-        <input type="checkbox" :id="'h'+item" v-model="item.checked" @change="toChangeFarter(item.kids)">
-        <label :for="'h'+item">{{item.name}}</label>
+        <input type="checkbox" :id="'h'+item.id" v-model="item.checked" @change="toChangeFarter(item.kids)">
+        <label :for="'h'+item.id">{{item.name}}</label>
         <div class="isShow" @click="toShow(index)">
           <span v-if="item.isShow">+</span>
           <span v-else>-</span>
